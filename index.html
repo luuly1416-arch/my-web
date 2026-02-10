@@ -2,52 +2,56 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Trang web của tôi</title>
+  <title>Toán học Online</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial;
       margin: 0;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
     }
-    nav {
-      background: #2c3e50;
-      padding: 10px;
+    header {
+      background: #111;
+      padding: 15px;
     }
     nav a {
       color: white;
-      margin-right: 15px;
+      margin-right: 20px;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: yellow;
     }
-    section {
+    .content {
+      padding: 40px;
+    }
+    .box {
+      background: rgba(255,255,255,0.15);
       padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="#home">Trang chủ</a>
-  <a href="#about">Giới thiệu</a>
-  <a href="#contact">Liên hệ</a>
-</nav>
+<header>
+  <nav>
+    <a href="index.html">🏠 Trang chủ</a>
+    <a href="math.html">📘 Toán học</a>
+    <a href="tailieu.html">📂 Tài liệu</a>
+    <a href="about.html">👤 Giới thiệu</a>
+  </nav>
+</header>
 
-<section id="home">
-  <h1>Chào mừng đến với trang web của tôi</h1>
-  <p>Đây là website đầu tiên mình đưa lên mạng 🚀</p>
-</section>
-
-<section id="about">
-  <h2>Giới thiệu</h2>
-  <p>Website được tạo bằng HTML và host trên Render.</p>
-</section>
-
-<section id="contact">
-  <h2>Liên hệ</h2>
-  <p>Email: example@gmail.com</p>
-</section>
+<div class="content">
+  <div class="box">
+    <h1>Website Toán học của tôi</h1>
+    <p>Học toán dễ hiểu – bài giảng, tài liệu, đề thi.</p>
+  </div>
+</div>
 
 </body>
 </html>
+
