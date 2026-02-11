@@ -1,23 +1,110 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Trang Toán Học Pro</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Học Toán Online</title>
+
+    <!-- Font đẹp -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <!-- MathJax hiển thị công thức -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            color: #333;
+            padding: 25px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            background: #ff4b2b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff416c;
+            transform: scale(1.05);
+        }
+
+        iframe {
+            width: 100%;
+            border-radius: 15px;
+        }
+    </style>
 </head>
+
 <body>
 
-<nav>
-  <a href="index.html">Trang chủ</a>
-  <a href="math.html">Toán học</a>
-  <a href="lessons.html">Bài giảng</a>
-  <a href="about.html">Giới thiệu</a>
-</nav>
+<header>
+    <h1>📚 HỌC TOÁN ONLINE</h1>
+    <p>Chinh phục đỉnh cao Toán học 🚀</p>
+</header>
 
-<h1>📘 Chào mừng đến với Web Toán Học</h1>
-<p>Học Toán vui – dễ – bài bản.</p>
+<div class="container">
+
+    <div class="card">
+        <h2>🧮 Công thức nổi bật</h2>
+        <p>Định lý Pythagore:</p>
+        <p>\\( a^2 + b^2 = c^2 \\)</p>
+
+        <p>Công thức nghiệm phương trình bậc 2:</p>
+        <p>\\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\)</p>
+    </div>
+
+    <div class="card">
+        <h2>🎥 Video bài giảng</h2>
+
+        <!-- Thay link video YouTube của bạn vào đây -->
+        <iframe height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            allowfullscreen>
+        </iframe>
+
+        <br>
+        <a href="#" class="btn">📥 Tải bài giảng PDF</a>
+    </div>
+
+    <div class="card">
+        <h2>🚀 Bắt đầu học</h2>
+        <a href="#" class="btn">Vào lớp 6</a>
+        <a href="#" class="btn">Vào lớp 7</a>
+        <a href="#" class="btn">Vào lớp 8</a>
+    </div>
+
+</div>
 
 </body>
 </html>
-
-
