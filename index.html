@@ -1,110 +1,156 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Học Toán Online</title>
+<meta charset="UTF-8">
+<title>Học Toán Online Pro</title>
 
-    <!-- Font đẹp -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- MathJax hiển thị công thức -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            color: white;
-            text-align: center;
-        }
+/* ===== MENU ===== */
+nav {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    text-align: center;
+}
 
-        header {
-            padding: 40px 20px;
-        }
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-        h1 {
-            font-size: 42px;
-        }
+nav a:hover {
+    text-decoration: underline;
+}
 
-        .container {
-            padding: 30px;
-        }
+/* ===== DARK MODE ===== */
+.dark {
+    background: #111;
+    color: white;
+}
 
-        .card {
-            background: white;
-            color: #333;
-            padding: 25px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
+.dark .card {
+    background: #222;
+    color: white;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            margin: 10px;
-            background: #ff4b2b;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+/* ===== CARD ===== */
+.card {
+    background: white;
+    color: #333;
+    padding: 25px;
+    margin: 30px auto;
+    width: 85%;
+    max-width: 700px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
 
-        .btn:hover {
-            background: #ff416c;
-            transform: scale(1.05);
-        }
+.btn {
+    padding: 10px 20px;
+    background: #ff416c;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
 
-        iframe {
-            width: 100%;
-            border-radius: 15px;
-        }
-    </style>
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.section {
+    display: none;
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>📚 HỌC TOÁN ONLINE</h1>
-    <p>Chinh phục đỉnh cao Toán học 🚀</p>
-</header>
+<!-- ===== MENU ===== -->
+<nav>
+<a onclick="showSection('home')">Trang chủ</a>
+<a onclick="showSection('lesson')">Bài giảng</a>
+<a onclick="showSection('quiz')">Đấu trường</a>
+<button class="btn" onclick="toggleDark()">🌙 Dark</button>
+</nav>
 
-<div class="container">
-
-    <div class="card">
-        <h2>🧮 Công thức nổi bật</h2>
-        <p>Định lý Pythagore:</p>
-        <p>\\( a^2 + b^2 = c^2 \\)</p>
-
-        <p>Công thức nghiệm phương trình bậc 2:</p>
-        <p>\\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\)</p>
-    </div>
-
-    <div class="card">
-        <h2>🎥 Video bài giảng</h2>
-
-        <!-- Thay link video YouTube của bạn vào đây -->
-        <iframe height="315"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            allowfullscreen>
-        </iframe>
-
-        <br>
-        <a href="#" class="btn">📥 Tải bài giảng PDF</a>
-    </div>
-
-    <div class="card">
-        <h2>🚀 Bắt đầu học</h2>
-        <a href="#" class="btn">Vào lớp 6</a>
-        <a href="#" class="btn">Vào lớp 7</a>
-        <a href="#" class="btn">Vào lớp 8</a>
-    </div>
-
+<!-- ===== TRANG CHỦ ===== -->
+<div id="home" class="section" style="display:block">
+<div class="card">
+<h2>📚 Chào mừng đến Học Toán Online</h2>
+<p>Định lý Pythagore:</p>
+<p>\\( a^2 + b^2 = c^2 \\)</p>
 </div>
+</div>
+
+<!-- ===== BÀI GIẢNG ===== -->
+<div id="lesson" class="section">
+<div class="card">
+<h2>🎥 Video bài giảng</h2>
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+allowfullscreen></iframe>
+</div>
+</div>
+
+<!-- ===== TRẮC NGHIỆM ===== -->
+<div id="quiz" class="section">
+<div class="card">
+<h2>📝 Bài trắc nghiệm</h2>
+
+<p>1 + 1 = ?</p>
+<button class="btn" onclick="checkAnswer(2)">2</button>
+<button class="btn" onclick="checkAnswer(3)">3</button>
+
+<p>Điểm: <span id="score">0</span></p>
+</div>
+</div>
+
+<script>
+let score = 0;
+
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.style.display="none");
+    document.getElementById(id).style.display="block";
+}
+
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+
+function checkAnswer(ans) {
+    if(ans === 2){
+        score += 10;
+        alert("Chính xác! +10 điểm 🎉");
+    } else {
+        alert("Sai rồi 😢");
+    }
+    document.getElementById("score").innerText = score;
+}
+</script>
 
 </body>
 </html>
+
